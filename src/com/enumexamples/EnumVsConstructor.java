@@ -3,7 +3,7 @@ package com.enumexamples;
 public class EnumVsConstructor {
 	
 	enum Laptop {
-	DELL, MACBOOK ,HP, SONY, LENOVO;
+	      DELL, MACBOOK ,HP, SONY, LENOVO;
 		//DELL(40000), MACBOOK(95000), HP(38000), SONY(36000), LENOVO(29000);
 		
 		int price;
