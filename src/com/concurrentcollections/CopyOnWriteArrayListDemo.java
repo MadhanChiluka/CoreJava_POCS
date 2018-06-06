@@ -33,6 +33,9 @@ public class CopyOnWriteArrayListDemo extends Thread {
 		Iterator iterator = arrayList.iterator();
 		while (iterator.hasNext()) {
 			String string = (String) iterator.next();
+			if(string.equals("B")) {
+				iterator.remove();
+			}
 			System.out.println("Main Thread Iterating List and Current Object is " + string);
 			Thread.sleep(3000);
 		}System.out.println(arrayList);
