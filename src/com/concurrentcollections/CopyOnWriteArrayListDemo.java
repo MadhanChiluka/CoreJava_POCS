@@ -33,12 +33,15 @@ public class CopyOnWriteArrayListDemo extends Thread {
 		Iterator iterator = arrayList.iterator();
 		while (iterator.hasNext()) {
 			String string = (String) iterator.next();
-			if(string.equals("B")) {
-				iterator.remove();
-			}
+			/*
+			 * if(string.equals("B")) }
+			 * iterator.remove();  -----------> Does not support in concurrent class while iterating and 
+			 * }                                      throws RE:java.lang.UnsupportedOperationException
+			 */
 			System.out.println("Main Thread Iterating List and Current Object is " + string);
 			Thread.sleep(3000);
-		}System.out.println(arrayList);
+		}
+		System.out.println(arrayList);
 
 	}
 
